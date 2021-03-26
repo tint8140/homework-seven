@@ -1,0 +1,45 @@
+.hero {
+  width: 1280px;
+  height: 500px;
+  //margin 0 auto only works if a width is set
+  margin: 0 auto;
+  background-image: linear-gradient(to right, $overlay-black, $overlay-black),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 20px;
+  text-align: center;
+  font-family: Gill;
+  color: $white;
+  header {
+    // text-transform: lowercase;
+    font-size: 60px;
+    margin: 69px auto 30px auto;
+    font-family: Proxima;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  button {
+    color: $white;
+    height: 40px;
+    width: 121px;
+    font-size: 15px;
+    background-color: $site-blue;
+    border: none;
+    margin-top: 46px;
+  }
+}
+@media only screen and (max-width: 1060px) {
+  .hero {
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0 auto;
+    align-items: center;
+    min-width: 80%;
+  }
+}
