@@ -16,8 +16,9 @@
       margin: 40px 20px 300px;
     }
     h3 {
-      align-items: right;
-      text-align: right;
+      position: absolute;
+      font-size: 30px;
+      right: 0px;
       bottom: 0px;
       text-transform: uppercase;
     }
@@ -28,39 +29,42 @@
     justify-content: space-between;
     margin: 50px auto;
     div {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .image1 {
+      background-image: url("/images/japan/japan-tour-01.jpg");
       height: 347px;
       width: 298px;
-      .image1 {
-        background-image: url("/images/japan/japan-tour-01.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    }
+    .image2 {
+      background-image: url("/images/japan/japan-tour-02.jpg");
+      height: 347px;
+      width: 298px;
+    }
+    .image3 {
+      background-image: url("/images/japan/japan-tour-03.jpg");
+      height: 347px;
+      width: 298px;
+    }
+  }
+  #paragraph {
+    width: 100%;
+    font-family: Proxima Thin;
+    .day {
+      margin-bottom: 80px;
+      h2 {
+        font-size: 60px;
+        border-bottom: $site-black solid 2px;
+        letter-spacing: 0.1em;
+        margin-bottom: 35px;
+        margin-right: 30px;
       }
-      .image2 {
-        background-image: url("/images/japan/japan-tour-02.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-      .image3 {
-        background-image: url("/images/japan/japan-tour-03.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      #paragraph {
-        width: 100%;
-        .day {
-          margin-bottom: 80px;
-          h2 {
-            display: flex;
-            font-size: 60px;
-            width: 120px;
-            border-bottom: $site-black solid 2px;
-            letter-spacing: 0.1em;
-            margin-bottom: 35px;
-            margin-right: 30px;
-          }
-        }
+      p {
+        font-family: Gill;
+        font-size: 16px;
       }
     }
   }

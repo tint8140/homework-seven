@@ -21,7 +21,7 @@ p {
 
 @font-face {
   font-family: Proxima;
-  src: url("../css/fonts/Proxima-Nova-Thin.ttf");
+  src: url("../css/fonts/ProximaNovaScOsfExtraCondensed.ttf");
 }
 @font-face {
   font-family: Gill;
@@ -471,19 +471,29 @@ nav .links #endBorder {
   position: relative;
 }
 .tour .tours text {
+  width: 100%;
   margin-bottom: 70px;
   font-size: 60px;
   position: absolute;
   top: 60px;
-  align-items: center;
+  text-align: center;
+}
+.tour .tours text span {
+  position: absolute;
+  font-size: 50px;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
 }
 .tour .tours p {
+  width: 100%;
   font-size: 30px;
   margin-top: 20px;
   margin-bottom: 50px;
   position: absolute;
   top: 100px;
-  left: 60px;
+  text-align: center;
 }
 .tour .tours .promoBtn {
   padding: 10px 30px;
@@ -497,13 +507,13 @@ nav .links #endBorder {
   left: 55px;
 }
 .tour .tours .promoBtn p {
-  max-width: 135px;
   font-size: 15px;
   font-family: Gill;
   position: absolute;
-  top: 0px;
+  top: -10px;
   left: 0px;
   right: 0px;
+  bottom: 10px;
   text-align: center;
 }
 .tour .tours .promo.Israel {
@@ -546,6 +556,7 @@ nav .links #endBorder {
   font-family: Proxima;
 }
 .israel #banner {
+  font-family: Proxima;
   position: relative;
   max-width: 100%;
   height: 413px;
@@ -560,51 +571,55 @@ nav .links #endBorder {
   margin: 40px 20px 300px;
 }
 .israel #banner h3 {
-  align-items: right;
-  text-align: right;
+  position: absolute;
+  font-size: 30px;
+  right: 0px;
   bottom: 0px;
   text-transform: uppercase;
 }
-.israel #subbanner {
+.israel .subbanner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 50px auto;
 }
-.israel #subbanner div {
-  height: 347px;
-  width: 298px;
-}
-.israel #subbanner div .image1 {
-  background-image: url("../images/israel/israel-tour-01.jpg");
+.israel .subbanner div {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.israel #subbanner div .image2 {
+.israel .subbanner .image1 {
+  background-image: url("../../images/israel/israel-tour-01.jpg");
+  height: 347px;
+  width: 298px;
+}
+.israel .subbanner .image2 {
   background-image: url("/images/israel/israel-tour-02.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.israel #subbanner div .image3 {
-  background-image: url("/images/israel/israel-tour-01.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+.israel .subbanner .image3 {
+  background-image: url("/images/israel/israel-tour-03.jpg");
+  height: 347px;
+  width: 298px;
 }
-.israel #subbanner div #paragraph {
+.israel #paragraph {
   width: 100%;
+  font-family: Proxima Thin;
 }
-.israel #subbanner div #paragraph .day {
+.israel #paragraph .day {
   margin-bottom: 80px;
 }
-.israel #subbanner div #paragraph .day h2 {
-  display: flex;
+.israel #paragraph .day h2 {
   font-size: 60px;
-  width: 120px;
   border-bottom: black solid 2px;
   letter-spacing: 0.1em;
   margin-bottom: 35px;
   margin-right: 30px;
+}
+.israel #paragraph .day p {
+  font-family: Gill;
+  font-size: 16px;
 }
 .israel button {
   padding: 10px 30px;
@@ -615,6 +630,14 @@ nav .links #endBorder {
   margin: 100px 400px;
 }
 
+@media only screen and (max-width: 1060px) {
+  .israel {
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
+    align-items: center;
+  }
+}
 .usa {
   max-width: 981px;
   margin: 20px auto 0 auto;
@@ -635,10 +658,11 @@ nav .links #endBorder {
   margin: 40px 20px 300px;
 }
 .usa #banner h3 {
-  align-items: right;
-  text-align: right;
+  position: absolute;
   bottom: 0px;
   text-transform: uppercase;
+  right: 0px;
+  bottom: 0px;
 }
 .usa #subbanner {
   display: flex;
@@ -647,39 +671,42 @@ nav .links #endBorder {
   margin: 50px auto;
 }
 .usa #subbanner div {
-  height: 347px;
-  width: 298px;
-}
-.usa #subbanner div .image1 {
-  background-image: url("/images/usa/usa-tour-01.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.usa #subbanner div .image2 {
+.usa #subbanner .image1 {
+  background-image: url("/images/usa/usa-tour-01.jpg");
+  height: 347px;
+  width: 298px;
+}
+.usa #subbanner .image2 {
   background-image: url("/images/usa/usa-tour-02.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.usa #subbanner div .image3 {
+.usa #subbanner .image3 {
   background-image: url("/images/usa/usa-tour-03.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.usa #subbanner div #paragraph {
+.usa #paragraph {
   width: 100%;
+  font-family: Proxima Thin;
 }
-.usa #subbanner div #paragraph .day {
+.usa #paragraph .day {
   margin-bottom: 80px;
 }
-.usa #subbanner div #paragraph .day h2 {
-  display: flex;
+.usa #paragraph .day h2 {
   font-size: 60px;
-  width: 120px;
   border-bottom: black solid 2px;
   letter-spacing: 0.1em;
   margin-bottom: 35px;
   margin-right: 30px;
+}
+.usa #paragraph .day p {
+  font-family: Gill;
+  font-size: 16px;
 }
 .usa button {
   padding: 10px 30px;
@@ -690,6 +717,14 @@ nav .links #endBorder {
   margin: 100px 400px;
 }
 
+@media only screen and (max-width: 1060px) {
+  .usa {
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
+    align-items: center;
+  }
+}
 .aus {
   max-width: 981px;
   margin: 20px auto 0 auto;
@@ -710,8 +745,9 @@ nav .links #endBorder {
   margin: 40px 20px 300px;
 }
 .aus #banner h3 {
-  align-items: right;
-  text-align: right;
+  position: absolute;
+  font-size: 30px;
+  right: 0px;
   bottom: 0px;
   text-transform: uppercase;
 }
@@ -722,39 +758,42 @@ nav .links #endBorder {
   margin: 50px auto;
 }
 .aus #subbanner div {
-  height: 347px;
-  width: 298px;
-}
-.aus #subbanner div .image1 {
-  background-image: url("/images/aus/aus-tour-01.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.aus #subbanner div .image2 {
+.aus #subbanner .image1 {
+  background-image: url("/images/aus/aus-tour-01.jpg");
+  height: 347px;
+  width: 298px;
+}
+.aus #subbanner .image2 {
   background-image: url("/images/aus/aus-tour-02.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.aus #subbanner div .image3 {
+.aus #subbanner .image3 {
   background-image: url("/images/aus/aus-tour-03.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.aus #subbanner div #paragraph {
+.aus #paragraph {
   width: 100%;
+  font-family: Proxima Thin;
 }
-.aus #subbanner div #paragraph .day {
+.aus #paragraph .day {
   margin-bottom: 80px;
 }
-.aus #subbanner div #paragraph .day h2 {
-  display: flex;
+.aus #paragraph .day h2 {
   font-size: 60px;
-  width: 120px;
   border-bottom: black solid 2px;
   letter-spacing: 0.1em;
   margin-bottom: 35px;
   margin-right: 30px;
+}
+.aus #paragraph .day p {
+  font-family: Gill;
+  font-size: 16px;
 }
 .aus button {
   padding: 10px 30px;
@@ -765,6 +804,14 @@ nav .links #endBorder {
   margin: 100px 400px;
 }
 
+@media only screen and (max-width: 1060px) {
+  .aus {
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
+    align-items: center;
+  }
+}
 .newZealand {
   max-width: 981px;
   margin: 20px auto 0 auto;
@@ -785,8 +832,9 @@ nav .links #endBorder {
   margin: 40px 20px 300px;
 }
 .newZealand #banner h3 {
-  align-items: right;
-  text-align: right;
+  position: absolute;
+  font-size: 30px;
+  right: 0px;
   bottom: 0px;
   text-transform: uppercase;
 }
@@ -797,39 +845,42 @@ nav .links #endBorder {
   margin: 50px auto;
 }
 .newZealand #subbanner div {
-  height: 347px;
-  width: 298px;
-}
-.newZealand #subbanner div .image1 {
-  background-image: url("/images/nz/nz-tour-01.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.newZealand #subbanner div .image2 {
+.newZealand #subbanner .image1 {
+  background-image: url("/images/nz/nz-tour-01.jpg");
+  height: 347px;
+  width: 298px;
+}
+.newZealand #subbanner .image2 {
   background-image: url("/images/nz/nz-tour-02.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.newZealand #subbanner div .image3 {
+.newZealand #subbanner .image3 {
   background-image: url("/images/nz/nz-tour-03.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.newZealand #subbanner div #paragraph {
+.newZealand #paragraph {
   width: 100%;
+  font-family: Proxima Thin;
 }
-.newZealand #subbanner div #paragraph .day {
+.newZealand #paragraph .day {
   margin-bottom: 80px;
 }
-.newZealand #subbanner div #paragraph .day h2 {
-  display: flex;
+.newZealand #paragraph .day h2 {
   font-size: 60px;
-  width: 120px;
   border-bottom: black solid 2px;
   letter-spacing: 0.1em;
   margin-bottom: 35px;
   margin-right: 30px;
+}
+.newZealand #paragraph .day p {
+  font-family: Gill;
+  font-size: 16px;
 }
 .newZealand button {
   padding: 10px 30px;
@@ -840,6 +891,14 @@ nav .links #endBorder {
   margin: 100px 400px;
 }
 
+@media only screen and (max-width: 1060px) {
+  .israel {
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
+    align-items: center;
+  }
+}
 .france {
   max-width: 981px;
   margin: 20px auto 0 auto;
@@ -860,8 +919,9 @@ nav .links #endBorder {
   margin: 40px 20px 300px;
 }
 .france #banner h3 {
-  align-items: right;
-  text-align: right;
+  position: absolute;
+  font-size: 30px;
+  right: 0px;
   bottom: 0px;
   text-transform: uppercase;
 }
@@ -872,39 +932,42 @@ nav .links #endBorder {
   margin: 50px auto;
 }
 .france #subbanner div {
-  height: 347px;
-  width: 298px;
-}
-.france #subbanner div .image1 {
-  background-image: url("/images/france/france-tour-01.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.france #subbanner div .image2 {
+.france #subbanner .image1 {
+  background-image: url("/images/france/france-tour-01.jpg");
+  height: 347px;
+  width: 298px;
+}
+.france #subbanner .image2 {
   background-image: url("/images/france/france-tour-02.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.france #subbanner div .image3 {
+.france #subbanner .image3 {
   background-image: url("/images/france/france-tour-03.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.france #subbanner div #paragraph {
+.france #paragraph {
   width: 100%;
+  font-family: Proxima Thin;
 }
-.france #subbanner div #paragraph .day {
+.france #paragraph .day {
   margin-bottom: 80px;
 }
-.france #subbanner div #paragraph .day h2 {
-  display: flex;
+.france #paragraph .day h2 {
   font-size: 60px;
-  width: 120px;
   border-bottom: black solid 2px;
   letter-spacing: 0.1em;
   margin-bottom: 35px;
   margin-right: 30px;
+}
+.france #paragraph .day p {
+  font-family: Gill;
+  font-size: 16px;
 }
 .france button {
   padding: 10px 30px;
@@ -935,8 +998,9 @@ nav .links #endBorder {
   margin: 40px 20px 300px;
 }
 .egypt #banner h3 {
-  align-items: right;
-  text-align: right;
+  position: absolute;
+  font-size: 30px;
+  right: 0px;
   bottom: 0px;
   text-transform: uppercase;
 }
@@ -947,39 +1011,42 @@ nav .links #endBorder {
   margin: 50px auto;
 }
 .egypt #subbanner div {
-  height: 347px;
-  width: 298px;
-}
-.egypt #subbanner div .image1 {
-  background-image: url("/images/egypt/egypt-tour-01.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.egypt #subbanner div .image2 {
+.egypt #subbanner .image1 {
+  background-image: url("/images/egypt/egypt-tour-01.jpg");
+  height: 347px;
+  width: 298px;
+}
+.egypt #subbanner .image2 {
   background-image: url("/images/egypt/egypt-tour-02.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.egypt #subbanner div .image3 {
+.egypt #subbanner .image3 {
   background-image: url("/images/egypt/egypt-tour-03.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.egypt #subbanner div #paragraph {
+.egypt #paragraph {
   width: 100%;
+  font-family: Proxima Thin;
 }
-.egypt #subbanner div #paragraph .day {
+.egypt #paragraph .day {
   margin-bottom: 80px;
 }
-.egypt #subbanner div #paragraph .day h2 {
-  display: flex;
+.egypt #paragraph .day h2 {
   font-size: 60px;
-  width: 120px;
   border-bottom: black solid 2px;
   letter-spacing: 0.1em;
   margin-bottom: 35px;
   margin-right: 30px;
+}
+.egypt #paragraph .day p {
+  font-family: Gill;
+  font-size: 16px;
 }
 .egypt button {
   padding: 10px 30px;
@@ -1010,8 +1077,9 @@ nav .links #endBorder {
   margin: 40px 20px 300px;
 }
 .japan #banner h3 {
-  align-items: right;
-  text-align: right;
+  position: absolute;
+  font-size: 30px;
+  right: 0px;
   bottom: 0px;
   text-transform: uppercase;
 }
@@ -1022,39 +1090,42 @@ nav .links #endBorder {
   margin: 50px auto;
 }
 .japan #subbanner div {
-  height: 347px;
-  width: 298px;
-}
-.japan #subbanner div .image1 {
-  background-image: url("/images/japan/japan-tour-01.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.japan #subbanner div .image2 {
+.japan #subbanner .image1 {
+  background-image: url("/images/japan/japan-tour-01.jpg");
+  height: 347px;
+  width: 298px;
+}
+.japan #subbanner .image2 {
   background-image: url("/images/japan/japan-tour-02.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.japan #subbanner div .image3 {
+.japan #subbanner .image3 {
   background-image: url("/images/japan/japan-tour-03.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.japan #subbanner div #paragraph {
+.japan #paragraph {
   width: 100%;
+  font-family: Proxima Thin;
 }
-.japan #subbanner div #paragraph .day {
+.japan #paragraph .day {
   margin-bottom: 80px;
 }
-.japan #subbanner div #paragraph .day h2 {
-  display: flex;
+.japan #paragraph .day h2 {
   font-size: 60px;
-  width: 120px;
   border-bottom: black solid 2px;
   letter-spacing: 0.1em;
   margin-bottom: 35px;
   margin-right: 30px;
+}
+.japan #paragraph .day p {
+  font-family: Gill;
+  font-size: 16px;
 }
 .japan button {
   padding: 10px 30px;
@@ -1085,8 +1156,9 @@ nav .links #endBorder {
   margin: 40px 20px 300px;
 }
 .canada #banner h3 {
-  align-items: right;
-  text-align: right;
+  position: absolute;
+  font-size: 30px;
+  right: 0px;
   bottom: 0px;
   text-transform: uppercase;
 }
@@ -1097,39 +1169,42 @@ nav .links #endBorder {
   margin: 50px auto;
 }
 .canada #subbanner div {
-  height: 347px;
-  width: 298px;
-}
-.canada #subbanner div .image1 {
-  background-image: url("/images/canada/canada-tour-01.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.canada #subbanner div .image2 {
+.canada #subbanner .image1 {
+  background-image: url("/images/canada/canada-tour-01.jpg");
+  height: 347px;
+  width: 298px;
+}
+.canada #subbanner .image2 {
   background-image: url("/images/canada/canada-tour-02.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.canada #subbanner div .image3 {
+.canada #subbanner .image3 {
   background-image: url("/images/canada/canada-tour-03.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.canada #subbanner div #paragraph {
+.canada #paragraph {
   width: 100%;
+  font-family: Proxima Thin;
 }
-.canada #subbanner div #paragraph .day {
+.canada #paragraph .day {
   margin-bottom: 80px;
 }
-.canada #subbanner div #paragraph .day h2 {
-  display: flex;
+.canada #paragraph .day h2 {
   font-size: 60px;
-  width: 120px;
   border-bottom: black solid 2px;
   letter-spacing: 0.1em;
   margin-bottom: 35px;
   margin-right: 30px;
+}
+.canada #paragraph .day p {
+  font-family: Gill;
+  font-size: 16px;
 }
 .canada button {
   padding: 10px 30px;
@@ -1160,8 +1235,9 @@ nav .links #endBorder {
   margin: 40px 20px 300px;
 }
 .uae #banner h3 {
-  align-items: right;
-  text-align: right;
+  position: absolute;
+  font-size: 30px;
+  right: 0px;
   bottom: 0px;
   text-transform: uppercase;
 }
@@ -1172,39 +1248,42 @@ nav .links #endBorder {
   margin: 50px auto;
 }
 .uae #subbanner div {
-  height: 347px;
-  width: 298px;
-}
-.uae #subbanner div .image1 {
-  background-image: url("/images/uae/uae-tour-01.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.uae #subbanner div .image2 {
+.uae #subbanner .image1 {
+  background-image: url("/images/uae/uae-tour-01.jpg");
+  height: 347px;
+  width: 298px;
+}
+.uae #subbanner .image2 {
   background-image: url("/images/uae/uae-tour-02.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.uae #subbanner div .image3 {
+.uae #subbanner .image3 {
   background-image: url("/images/uae/uae-tour-03.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 347px;
+  width: 298px;
 }
-.uae #subbanner div #paragraph {
+.uae #paragraph {
   width: 100%;
+  font-family: Proxima Thin;
 }
-.uae #subbanner div #paragraph .day {
+.uae #paragraph .day {
   margin-bottom: 80px;
 }
-.uae #subbanner div #paragraph .day h2 {
-  display: flex;
+.uae #paragraph .day h2 {
   font-size: 60px;
-  width: 120px;
   border-bottom: black solid 2px;
   letter-spacing: 0.1em;
   margin-bottom: 35px;
   margin-right: 30px;
+}
+.uae #paragraph .day p {
+  font-family: Gill;
+  font-size: 16px;
 }
 .uae button {
   padding: 10px 30px;
@@ -1288,7 +1367,7 @@ nav .links #endBorder {
   color: white;
   height: 40px;
   position: absolute;
-  max-width: 135px;
+  max-width: 140px;
   font-size: 15px;
   font-family: Gill;
   width: 100%;
@@ -1341,13 +1420,18 @@ nav .links #endBorder {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media only screen and (max-width: 980px) {
-  .specialOffers .about {
+@media only screen and (max-width: 1080px) {
+  .specialOffers .specialOffers {
     min-width: 80%;
-    flex-direction: column;
+  }
+  .specialOffers .specialOffers .partOne {
+    display: flex;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0 auto;
     padding-left: 40px;
-    padding-right: 20px;
     align-items: center;
+    margin: 0 100px;
   }
 }
 
@@ -1420,10 +1504,11 @@ nav .links #endBorder {
 .contact {
   max-width: 980px;
   margin: 0 auto;
-  height: 100%;
+  min-height: 800px;
+  position: relative;
 }
 .contact h4 {
-  margin-top: 100px;
+  margin-top: 50px;
   font-family: Proxima;
   font-size: 30px;
   width: 180px;
@@ -1432,10 +1517,19 @@ nav .links #endBorder {
 }
 .contact .box {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  position: relative;
+  margin-bottom: 300px;
+}
+.contact .box p {
+  display: flex;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 400px;
+  height: 161px;
 }
 .contact .box .map {
   position: absolute;
@@ -1446,36 +1540,35 @@ nav .links #endBorder {
   background-repeat: no-repeat;
   background-position: center;
 }
-.contact .box p {
-  display: flex;
+.contact .box .form {
   position: absolute;
-  left: 0px;
-  margin: 600px 0px;
-  width: 400px;
-  height: 161px;
-}
-.contact .form {
-  position: absolute;
-  margin: 125px 450px;
+  top: 150px;
+  right: 0px;
   height: 522px;
+  width: 530px;
+  right: 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   color: #ffffff;
 }
-.contact .form input {
+.contact .box .form .first-input {
+  margin-top: 300px;
+}
+.contact .box .form input {
+  margin-bottom: 20px;
   height: 60px;
-  width: 529px;
+  width: 100%;
   border: none;
   padding: 20px;
   font-family: Gill;
   background-color: #f5f5f5;
 }
-.contact .form input:last-of-type {
+.contact .box .form .last-input {
   height: 199px;
   padding-bottom: 170px;
 }
-.contact .form .button {
+.contact .box .form .button {
   padding: 10px 10px;
   border-radius: 5px;
   background-color: #79addc;

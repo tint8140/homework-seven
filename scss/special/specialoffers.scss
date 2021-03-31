@@ -60,7 +60,7 @@
     @include siteButton(10px 30px, 25px);
     height: 40px;
     position: absolute;
-    max-width: 135px;
+    max-width: 140px;
     font-size: 15px;
     font-family: Gill;
     width: 100%;
@@ -111,13 +111,19 @@
     }
   }
 
-  @media only screen and (max-width: 980px) {
-    .about {
+  @media only screen and (max-width: 1080px) {
+    .specialOffers {
       min-width: 80%;
-      flex-direction: column;
-      padding-left: 40px;
-      padding-right: 20px;
-      align-items: center;
+      .partOne {
+        display: flex;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0 auto;
+        padding-left: 40px;
+        // padding-right: 20px;
+        align-items: center;
+        margin: 0 100px;
+      }
     }
   }
 }

@@ -1,10 +1,11 @@
 .contact {
   max-width: 980px;
   margin: 0 auto;
-  height: 100%;
+  min-height: 800px;
+  position: relative;
 
   h4 {
-    margin-top: 100px;
+    margin-top: 50px;
     font-family: Proxima;
     font-size: 30px;
     width: 180px;
@@ -13,11 +14,20 @@
   }
   .box {
     width: 100%;
-    // height: 80%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    position: relative;
+    margin-bottom: 300px;
+    p {
+      display: flex;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      width: 400px;
+      height: 161px;
+    }
+
     .map {
       position: absolute;
       width: 400px;
@@ -28,40 +38,40 @@
       background-position: center;
       // margin-bottom: 200px;
     }
-    p {
-      display: flex;
+
+    .form {
       position: absolute;
-      left: 0px;
-      margin: 600px 0px;
-      width: 400px;
-      height: 161px;
-    }
-  }
-  .form {
-    position: absolute;
-    margin: 125px 450px;
-    height: 522px;
-    // justify-content: space-around;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    color: $white;
-    input {
-      height: 60px;
-      width: 529px;
-      border: none;
-      padding: 20px;
-      font-family: Gill;
-      background-color: #f5f5f5;
-    }
-    input:last-of-type {
-      height: 199px;
-      padding-bottom: 170px;
-    }
-    .button {
-      @include siteButton(10px 10px, 5px);
-      width: 167px;
-      margin-bottom: 300px;
+      top: 150px;
+      right: 0px;
+      height: 522px;
+      width: 530px;
+      right: 0px;
+      // justify-content: space-around;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      color: $white;
+      .first-input {
+        margin-top: 300px;
+      }
+      input {
+        margin-bottom: 20px;
+        height: 60px;
+        width: 100%;
+        border: none;
+        padding: 20px;
+        font-family: Gill;
+        background-color: #f5f5f5;
+      }
+      .last-input {
+        height: 199px;
+        padding-bottom: 170px;
+      }
+      .button {
+        @include siteButton(10px 10px, 5px);
+        width: 167px;
+        margin-bottom: 300px;
+      }
     }
   }
 }
